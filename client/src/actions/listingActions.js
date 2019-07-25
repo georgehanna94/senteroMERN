@@ -1,9 +1,15 @@
 import axios from "axios";
 import { GET_LISTINGS, ADD_LISTING, DELETE_LISTING } from "./types";
 
-// GET ARTICLES
-export const getListings = () => (dispatch, getState) => {
-  return {
-    type: GET_LISTINGS
-  };
+// GET LISTINGS
+export const getListings = () => dispatch => {
+  axios
+    .get("/api/listings/")
+    .then(res => {
+      dispatch({
+        type: GET_LISTINGS,
+        payload: res.data
+      });
+    })
+    .catch(err => console.log(err));
 };

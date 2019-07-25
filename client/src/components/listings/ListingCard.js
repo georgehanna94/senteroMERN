@@ -5,9 +5,9 @@ export class ListingCard extends Component {
     return (
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title">{this.props.name}</h5>
+          <h5 className="card-title">{this.props.companyname}</h5>
           <h6 className="card-subtitle mb-2 text-muted">{this.props.id}</h6>
-          <p className="card-text">{this.props.services}</p>
+          <p className="card-text">{this.props.date}</p>
           <a href="#" className="card-link">
             {this.props.email}
           </a>

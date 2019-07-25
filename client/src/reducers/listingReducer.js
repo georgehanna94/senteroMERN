@@ -1,9 +1,7 @@
 import { GET_LISTINGS, DELETE_LISTING, ADD_LISTING } from "../actions/types.js";
 
 const initialState = {
-  listing: [
-      {companyname: 'Speakable'}
-  ]
+  listings: []
 };
 
 export default function(state = initialState, action) {
