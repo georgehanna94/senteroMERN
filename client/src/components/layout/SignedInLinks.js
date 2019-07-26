@@ -5,7 +5,7 @@ const SignedInLinks = props => {
   return (
     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
       <li className="nav-item">
-        <NavLink to="/" className="nav-link">
+        <NavLink to="/newlisting" className="nav-link">
           New Listing
         </NavLink>
       </li>

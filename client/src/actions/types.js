@@ -3,6 +3,7 @@ export const DELETE_LISTING = "DELETE_LISTING";
 export const ADD_LISTING = "ADD_LISTING";
 export const GET_CATEGORIES = "GET_CATEGORIES";
 export const SELECT_CATEGORY = "SELECT_CATEGORY";
+export const LISTINGS_LOADING = "LISTING_LOADING";
 
 export const GET_ERRORS = "GET_ERRORS";
 export const GET_MESSAGES = "GET_MESSAGES";

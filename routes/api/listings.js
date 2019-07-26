@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const auth = require("../../middleware/auth");
 
 //Listing Model
 const Listing = require("../../models/Listing");
@@ -16,7 +17,7 @@ router.get("/", (req, res) => {
 // @route POST api/listings
 // @desc Create a Listing
 // @access Public
-router.post("/", (req, res) => {
+router.post("/", auth, (req, res) => {
   const newListing = new Listing({
     company_name: req.body.company_name,
     email: req.body.email,
@@ -51,7 +52,7 @@ router.post("/", (req, res) => {
 // @route DELETE api/listings/:id
 // @desc Delete a Listing
 // @access Public
-router.delete("/:id", (req, res) => {
+router.delete("/:id", auth, (req, res) => {
   Listing.findById(req.params.id)
     .then(listing => listing.remove().then(() => res.json({ success: true })))
     .catch(err => res.status(404).json({ success: false }));

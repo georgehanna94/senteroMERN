@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+import { Progress } from "reactstrap";
+import { connect } from "react-redux";
+import { addListing } from "../../actions/listingActions";
 
 export class NewListing extends Component {
   render() {
     return (
       <div>
-        <h1>Yo</h1>
+        <div className="text-center">1 of 5</div>
+        <Progress value="1" max="5" />
       </div>
     );
   }
 }
 
-export default NewListing;
+export default connect()(NewListing);

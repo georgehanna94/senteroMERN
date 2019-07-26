@@ -1,7 +1,13 @@
-import { GET_LISTINGS, DELETE_LISTING, ADD_LISTING } from "../actions/types.js";
+import {
+  GET_LISTINGS,
+  DELETE_LISTING,
+  ADD_LISTING,
+  LISTINGS_LOADING
+} from "../actions/types.js";
 
 const initialState = {
-  listings: []
+  listings: [],
+  loading: false
 };
 
 export default function(state = initialState, action) {
@@ -9,14 +15,15 @@ export default function(state = initialState, action) {
     case GET_LISTINGS:
       return {
         ...state,
-        listings: action.payload
+        listings: action.payload,
+        loading: false
       };
 
     case DELETE_LISTING:
       return {
         ...state,
         listings: state.listings.filter(
-          listing => listing.id !== action.payload
+          listing => listing._id !== action.payload
         )
       };
 
@@ -25,7 +32,11 @@ export default function(state = initialState, action) {
         ...state,
         listings: [...state.listings, action.payload]
       };
-
+    case LISTINGS_LOADING:
+      return {
+        ...state,
+        loading: true
+      };
     default:
       return state;
   }
