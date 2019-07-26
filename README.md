@@ -1,3 +1,4 @@
+
 # senteroMERN
 
 Sentero app is using a MERN stack (MongoDB (hosted on MongoAtlas), Express JS, React, Node JS). The app is hosted on Heroku.
@@ -14,4 +15,22 @@ cd into the root directory
 npm run client-install 
 npm run dev
 ```
+
+## Deployment
+
+### First time:
+Ensure Heroku CLI is installed.
+
+```
+heroku login
+heroku git:remote -a sentero-app
+```
+
+### Future Deployments
+```
+git add .
+git commit -m
+git push heroku master
+```
+
 
