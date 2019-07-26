@@ -1,12 +1,41 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import { login } from "../../actions/authActions";
+import { clearErrors } from "../../actions/errorActions";
+import { Alert } from "reactstrap";
+
+import PropTypes from "prop-types";
 
 export class SignIn extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    msg: null
   };
+
+  static propTypes = {
+    isAuthenticated: PropTypes.bool,
+    error: PropTypes.object.isRequired,
+    login: PropTypes.func.isRequired,
+    clearErrors: PropTypes.func.isRequired
+  };
+
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { error } = this.props;
+    if (error !== prevProps.error) {
+      //Check for register error
+      if (error.id === "LOGIN_FAIL") {
+        this.setState({ msg: error.msg.msg });
+      } else {
+        this.setState({ msg: null });
+      }
+    }
+  }
 
   handleChange = e => {
     this.setState({
@@ -15,10 +44,19 @@ export class SignIn extends Component {
   };
 
   handleSubmit = e => {
+    this.props.clearErrors();
     e.preventDefault();
+    const { email, password } = this.state;
+    const User = {
+      password,
+      email
+    };
+    this.props.login(User);
   };
 
   render() {
+    const { isAuthenticated } = this.props;
+    if (isAuthenticated) return <Redirect to="/Dashboard" />;
     return (
       <div className="container">
         <div className="row">
@@ -26,6 +64,9 @@ export class SignIn extends Component {
             <div className="card card-signin my-5">
               <div className="card-body">
                 <h5 className="card-title text-center">Sign In</h5>
+                {this.state.msg ? (
+                  <Alert color="danger">{this.state.msg}</Alert>
+                ) : null}
                 <form className="form-signin" onSubmit={this.handleSubmit}>
                   <div className="form-label-group">
                     <input
@@ -97,4 +138,12 @@ export class SignIn extends Component {
   }
 }
 
-export default SignIn;
+const mapStateToProps = state => ({
+  isAuthenticated: state.authReducer.isAuthenticated,
+  error: state.errorReducer
+});
+
+export default connect(
+  mapStateToProps,
+  { login, clearErrors }
+)(SignIn);

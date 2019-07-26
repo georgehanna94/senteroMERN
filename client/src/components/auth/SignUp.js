@@ -63,6 +63,8 @@ export class SignUp extends Component {
   };
 
   render() {
+    const { isAuthenticated } = this.props;
+    if (isAuthenticated) return <Redirect to="/Dashboard" />;
     return (
       <div className="container">
         <div className="row">
@@ -170,7 +172,6 @@ export class SignUp extends Component {
 const mapStateToProps = state => ({
   isAuthenticated: state.authReducer.isAuthenticated,
   error: state.errorReducer,
-  register: PropTypes.func.isRequired
 });
 
 export default connect(
