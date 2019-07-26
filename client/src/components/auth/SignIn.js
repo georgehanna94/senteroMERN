@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
 export class SignIn extends Component {
   state = {
@@ -18,7 +19,6 @@ export class SignIn extends Component {
   };
 
   render() {
-
     return (
       <div className="container">
         <div className="row">

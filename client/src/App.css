@@ -18,7 +18,7 @@
 .card-signin .card-img-left {
   width: 45%;
   /* Link to your background image using in the property below! */
-  background: scroll center url("./img/newfam.png");
+  background: scroll center url("./img/newfam 2.png");
   background-size: contain;
 }
 
@@ -104,6 +104,7 @@
 .btn-google {
   color: white;
   background-color: #ea4335;
+
 }
 
 .btn-facebook {
