@@ -15,7 +15,7 @@ export class Landing extends Component {
           </div>
 
           <div className="col">
-            <img src={famimg} width="650px" height="500px" />
+            <img src={famimg} width="650px" height="500px" alt="family img"/>
           </div>
         </div>
         <div className="container-fluid">

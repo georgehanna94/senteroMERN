@@ -18,7 +18,7 @@ export class ListingsList extends Component {
     return (
       <Fragment>
         {this.props.listings.map(listing => (
-          <ul key={listing.id}>
+          <ul key={listing._id}>
             <ListingCard company_name ={listing.company_name} phone = {listing.phone} email = {listing.email} website = {listing.website}   />
           </ul>
         ))}

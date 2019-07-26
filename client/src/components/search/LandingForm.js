@@ -10,9 +10,9 @@ import {
   CustomInput,
   Card
 } from "reactstrap";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
-export default class LandingForm extends React.Component {
+export default class LandingForm extends Component {
   state = {
     submitted: "false"
   };
@@ -22,7 +22,7 @@ export default class LandingForm extends React.Component {
     this.setState({ submitted: "true" });
   };
   render() {
-    if (this.state.submitted == "true") {
+    if (this.state.submitted === "true") {
       return <Redirect to="/Dashboard" />;
     }
     return (

@@ -4,39 +4,39 @@ import ListingsList from "../listings/ListingsList";
 export class Dashboard extends Component {
   render() {
     return (
-      <div class="d-flex" id="wrapper">
-        <div class="bg-light border-right" id="sidebar-wrapper">
-          <div class="sidebar-heading">Start Bootstrap </div>
-          <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action bg-light">
+      <div className="d-flex" id="wrapper">
+        <div className="bg-light border-right" id="sidebar-wrapper">
+          <div className="sidebar-heading">Start Bootstrap </div>
+          <div className="list-group list-group-flush">
+            <a href="#" className="list-group-item list-group-item-action bg-light">
               Dashboard
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">
+            <a href="#" className="list-group-item list-group-item-action bg-light">
               Shortcuts
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">
+            <a href="#" className="list-group-item list-group-item-action bg-light">
               Overview
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">
+            <a href="#" className="list-group-item list-group-item-action bg-light">
               Events
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">
+            <a href="#" className="list-group-item list-group-item-action bg-light">
               Profile
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">
+            <a href="#" className="list-group-item list-group-item-action bg-light">
               Status
             </a>
           </div>
         </div>
 
         <div id="page-content-wrapper">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <button class="btn btn-primary" id="menu-toggle">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button className="btn btn-primary" id="menu-toggle">
               Showing X results
             </button>
 
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbarSupportedContent"
@@ -44,18 +44,18 @@ export class Dashboard extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon" />
+              <span className="navbar-toggler-icon" />
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    Home <span class="sr-only">(current)</span>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li className="nav-item active">
+                  <a className="nav-link" href="#">
+                    Home <span className="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
                     Link
                   </a>
                 </li>
@@ -63,8 +63,8 @@ export class Dashboard extends Component {
             </div>
           </nav>
 
-          <div class="container-fluid">
-            <h1 class="mt-4">Search Results</h1>
+          <div className="container-fluid">
+            <h1 className="mt-4">Search Results</h1>
             <ListingsList />
           </div>
         </div>
