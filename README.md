@@ -33,4 +33,14 @@ git commit -m
 git push heroku master
 ```
 
+### Submitting new listings (via Postman)
+
+First Log in to get your user token
+Then
+"POST http://localhost:5000/api/listings"
+Headers: Content-type application/json
+	 x-auth-token <token from signing in>
+Body: Json files corresponding to listing schema
+
+
 

@@ -162,7 +162,7 @@ export default class LandingForm extends Component {
               </Col>
             </Row>
             <div>
-              <Button style={{ position: "relative", left: "35em" }}>
+              <Button style={{ position: "absolute", left: "35em" }}>
                 Search
               </Button>
             </div>

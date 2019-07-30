@@ -12,7 +12,7 @@ import {
 export class Featured extends Component {
   render() {
     return (
-      <Card sm={4} style={{ backgroundColor: '#', borderColor: '#' }}>
+      <Card sm={4} className="colLand">
         <CardImg
           top
           width="10%"

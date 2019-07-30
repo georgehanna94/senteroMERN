@@ -1,6 +1,7 @@
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: 0.75rem;
+  flex-grow: 1;
 }
 
 .card-signin {
@@ -13,6 +14,11 @@
   margin-bottom: 2rem;
   font-weight: 300;
   font-size: 1.5rem;
+}
+
+.colLand {
+  margin-right: 1em;
+  margin-top: 1em;
 }
 
 .card-signin .card-img-left {
@@ -104,7 +110,6 @@
 .btn-google {
   color: white;
   background-color: #ea4335;
-
 }
 
 .btn-facebook {
@@ -150,6 +155,52 @@
 
 #wrapper.toggled #sidebar-wrapper {
   margin-left: 0;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+.material-icons {
+  font-size: 2.4em;
+  cursor: pointer;
+}
+.card {
+  width: 700px;
+  height: 300px;
+  margin: 10px;
+
+}
+.card .card-image .card-title {
+  color: black;
+  font-weight: 400;
+}
+.cart {
+  margin-top: 40px;
+}
+.collection .collection-item {
+  display: flex;
+}
+.collection-item.avatar .title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ee6e73;
+  display: block;
+  margin-bottom: 20px;
+}
+.collection .collection-item img {
+  width: 150px;
+  margin-right: 25px;
+}
+.item-desc {
+  align-self: center;
 }
 
 @media (min-width: 768px) {

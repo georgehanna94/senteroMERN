@@ -6,7 +6,7 @@ export class Dashboard extends Component {
     return (
       <div className="d-flex" id="wrapper">
         <div className="bg-light border-right" id="sidebar-wrapper">
-          <div className="sidebar-heading">Start Bootstrap </div>
+          <div className="sidebar-heading">Filter </div>
           <div className="list-group list-group-flush">
             <a href="#" className="list-group-item list-group-item-action bg-light">
               Dashboard
